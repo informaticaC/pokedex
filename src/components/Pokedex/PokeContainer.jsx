@@ -30,6 +30,7 @@ const PokeContainer = ({formUrl}) => {
   //pokemons?.results
   let totalPokemons = 0
   let currentPokemons = []
+  
   if(!pokemons?.pokemon && !pokemons?.results) {
     setTimeout(() => {
       console.log("Retrasado por 1 segundo.");
@@ -58,6 +59,8 @@ const PokeContainer = ({formUrl}) => {
       currentPokemons = pokemons?.results.slice(indexOfFirstPokemon, indexOfLastPokemon)
     }
   } // end Get current pokemons
+
+  //console.log(currentPokemons)
 
   //Change page
 

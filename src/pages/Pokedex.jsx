@@ -14,8 +14,6 @@ const Pokedex = () => {
   return (
     
     <div>
-        <h1>Pokedex</h1>
-
         <p><span>Welcome {trainerName}</span></p>
         <FormPoke setFormUrl = {setFormUrl} urlBase = {urlBase} />
         <PokeContainer formUrl = {formUrl}  />

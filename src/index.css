@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 html {
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -37,4 +39,5 @@ select {
 
 img {
     width: 100%;
+    display: block;
   }
