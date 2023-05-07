@@ -1,16 +1,27 @@
+.home__container{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
 .home{
-    height: 100vh;
+    height: 100vh ;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    /* background-color: aquamarine; */
+    /* background-color: rgb(187, 247, 227);  */
 }
 
 .home__items{
-    padding-bottom: 5em;
+    margin-bottom: 7em;
+    width: 650px;
+
+     /* background-color: blue;  */
 }
 
 .home__title{
@@ -42,14 +53,83 @@ text-align: center;
 }
 
 .home_footer{
-    background-color: gold;
-    max-height: 200px;
-    height: 150px;
-    width: 1440px;
+    /* background-color: blueviolet; */
+    /* max-height: 200px; */
+    height: 160px;
+    width: 100%;
     background-image: url('../../img/homeFooter.svg');
     background-position:bottom;
-    background-size:contain; 
+    background-size: contain; 
     background-repeat: no-repeat;
     position: absolute;
     bottom: 0;
+    left: 0;
 }
+
+@media  (min-width: 1440px){
+    .home_footer{
+        height: 160px;
+        width: 100%;
+        background-size: cover; 
+    }
+}
+
+@media  (max-width: 1200px){
+    .home__items{
+        
+        width: 550px;
+        /* background-color: blue;  */
+    }
+    .home_footer{
+        height: 150px;
+        width: 100%;
+        background-size:cover; 
+    }
+}
+
+ @media (max-width: 800px){
+    /* .home{
+        height: 150vh;
+        width: 100%;
+    } */
+    .home__items{
+        
+        width: 380px;
+        /* background-color: greenyellow;  */
+    }
+    .home_footer{
+        height: 140px;
+        width: 100%;
+        max-width: 800px;
+        background-size: cover;
+    } 
+} 
+
+@media (max-width: 500px){
+     .home{
+        height: 93vh;
+        width: 100%;
+        /* background-color: red; */
+    } 
+    .home_footer{
+        height: 120px;
+        width: 100%;
+       
+        background-size: cover;
+    } 
+}
+@media (max-width: 400px){
+    .home{
+       height: 92vh;
+       width: 100%;
+       /* background-color: red; */
+   } 
+   .home_footer{
+       height: 110px;
+       width: 100%;
+      
+       background-size: cover;
+   }     
+    
+
+} 

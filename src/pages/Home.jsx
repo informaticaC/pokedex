@@ -4,6 +4,7 @@ import './styles/home.css'
 
 const Home = () => {
   return (
+    <div className="home__container">
     <article className='home'>
       <div className='home__items'>
         <div className='home__title'></div>
@@ -13,6 +14,7 @@ const Home = () => {
       </div>
       <div className="home_footer"></div>
     </article>
+    </div>
   )
 }
 
