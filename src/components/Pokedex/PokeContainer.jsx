@@ -5,7 +5,7 @@ import PokeCard from './PokeCard'
 import Pagination from '../Pagination'
 
  
-const PokeContainer = ({formUrl}) => {
+const PokeContainer = ({formUrl}) => {  //llamado de Pokedex.jsx-- muestra todos los pokemones (las PokeCard.jsx)
 
   const [loading, setLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
