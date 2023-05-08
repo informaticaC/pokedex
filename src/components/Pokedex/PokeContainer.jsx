@@ -9,7 +9,7 @@ const PokeContainer = ({formUrl}) => {  //llamado de Pokedex.jsx-- muestra todos
 
   const [loading, setLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
-  const [pokemonsPerPage, setPokemonsPerPage] = useState(6)
+  const [pokemonsPerPage, setPokemonsPerPage] = useState(12)
   //const url = 'https://pokeapi.co/api/v2/pokemon?limit=500&offset=0'
   
   const [pokemons, getAllPokemons] = useFetch(formUrl)

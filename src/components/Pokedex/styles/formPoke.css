@@ -1,3 +1,30 @@
-h1{
-    color: red;
+.formPokeContainer{
+    background-color: red;
+    display: flex;
+    justify-content: space-evenly;
 }
+
+.formPokeContainer__form{
+
+    background-color: aqua;
+    display: flex;
+}
+
+.formPokeContainer__form input{
+    border-radius: .5em 0 0 .5em;
+    width: 12em;
+
+}
+
+.formPokeContainer__form button{
+    border-radius: 0 .5em .5em 0;
+    background-color: red;
+    color: wheat;
+    width: 6em;
+}
+
+.formPokeContainer__select{
+    border-radius: .5em;
+    width: 12em;
+}
+

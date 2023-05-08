@@ -15,17 +15,13 @@ const Pokedex = () => { //aquí llega luego de que intoducimos un usuario en For
     
     <article className='pokedex'>
         <header className='pokedex__header'>
-            {/* <img src="../../img/headerPokeListImg.svg" alt="" className="pokedex__header--img" /> */}
-            <div className="pokedex__text-container">
-             
-                {/* <img className='pokedex__header-text' src="../../img/pokedexHeaderForm.svg" alt="" /> */}
-              
-              
-            </div>
+          <div className="pokedex__text-container"></div>
         </header>
-        <p><span className='pokedex__welcome'>Welcome {trainerName}</span></p>
-        <FormPoke setFormUrl = {setFormUrl} urlBase = {urlBase} />
-        <PokeContainer formUrl = {formUrl}  />
+        <article className='pokedex__form-and-pokecontainer'>
+            <p><span className='pokedex__welcome'><span>Welcome {trainerName},</span> here you can find your favorite Pokemon</span></p>
+            <FormPoke setFormUrl = {setFormUrl} urlBase = {urlBase} />
+            <PokeContainer formUrl = {formUrl}  />
+        </article>
     </article>
   )
 }

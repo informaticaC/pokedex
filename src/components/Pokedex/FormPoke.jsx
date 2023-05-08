@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
+import './styles/formPoke.css'
 
 
 const FormPoke = ({setFormUrl, urlBase}) => { //FormPoke viene llamado de Pokedex.jsx
@@ -32,14 +33,14 @@ const FormPoke = ({setFormUrl, urlBase}) => { //FormPoke viene llamado de Pokede
     }
 
   return (
-    <div className='formPoke__container' >
+    <div className='formPokeContainer' >
         
 
-        <form className='formPoke' onSubmit={handleSubmit}> {/*formulario para seleccionar por nombre de pokemon*/}
-             <input ref={inputPoke} type="text" />  
+        <form className='formPokeContainer__form' onSubmit={handleSubmit}> {/*formulario para seleccionar por nombre de pokemon*/}
+            <input ref={inputPoke} type="text" />  
             <button>Search</button>
         </form>
-        <select onChange={handleChange} name="" id=""> {/* select para elegir pokes por tipo */}
+        <select className='formPokeContainer__select' onChange={handleChange} name="" id=""> {/* select para elegir pokes por tipo */}
             <option value={urlBase}>All Pokemons</option>
             {
                 types?.results.map(type => ( //aquí se renderiza el listado de opciones de tipos de pokes
