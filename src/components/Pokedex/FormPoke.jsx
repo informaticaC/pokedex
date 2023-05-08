@@ -32,9 +32,10 @@ const FormPoke = ({setFormUrl, urlBase}) => { //FormPoke viene llamado de Pokede
     }
 
   return (
-    <div className='form' >
+    <div className='formPoke__container' >
+        
 
-        <form className='formPoke form-control' onSubmit={handleSubmit}> {/*formulario para seleccionar por nombre de pokemon*/}
+        <form className='formPoke' onSubmit={handleSubmit}> {/*formulario para seleccionar por nombre de pokemon*/}
              <input ref={inputPoke} type="text" />  
             <button>Search</button>
         </form>

@@ -78,6 +78,7 @@ const PokeContainer = ({formUrl}) => {  //llamado de Pokedex.jsx-- muestra todos
             paginate = {paginate}
             />
        </div> 
+       
       <article className="poke-container">
 
        {

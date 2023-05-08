@@ -1,0 +1,97 @@
+.pokedex{
+    background-color: rgb(255, 255, 255);
+}
+.pokedex__header{
+    width: 100vw;
+    height:260px;
+    /* max-height: 400px; */
+    /* min-height: 200px; */
+    background-image: url('../../img/headerPokeListImg.svg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    /* background-color: violet; */
+         
+    position: relative;
+}
+
+.pokedex__text-container{
+    background-image: url("../../img/pokedexHeaderForm.svg");  
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    position: absolute;
+    top:0;
+    left: 0;
+    /* background-color: blue; */
+    height: 75%;
+    width: 40%;
+    border: 0;
+    margin-left: 4em;
+    z-index: 400;
+    
+}
+
+@media (min-width: 576px){
+    .pokedex__header{
+        background-position: right;
+        width: 100vw;
+        height: 105px;
+        background-size: cover;
+        
+        /* background-color: chartreuse; */
+    }
+
+    .pokedex__text-container{
+        /* background-color: aqua; */
+        height: 78%;
+    }
+}
+
+@media (min-width: 768px){
+    .pokedex__header{
+        background-position: right;
+        width: 100vw;
+        height: 165px;
+        min-height: 100px;
+        
+    }
+    .pokedex__text-container{
+        height: 88%;
+    }
+}
+
+@media (min-width: 992px){
+    .pokedex__header{
+        background-position: right;
+        width: 100vw;
+        height: 165px;
+        min-height: 120px;
+    }
+    .pokedex__text-container{
+        height: 85%;
+    }
+}
+
+@media (min-width: 1200px){
+    .pokedex__header{
+        background-position: right;
+        width: 100vw;
+        height: 188px;
+        min-height: 120px;
+    }
+    .pokedex__text-container{
+        height: 80%;
+    }
+}
+
+@media (min-width: 1400px){
+    .pokedex__header{
+        background-position: right;
+        width: 100vw;
+        height: 252px;
+        min-height: 120px;
+        
+       
+    }
+}
