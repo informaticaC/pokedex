@@ -101,13 +101,13 @@ const PokeContainer = ({formUrl}) => {  //llamado de Pokedex.jsx-- muestra todos
         )
        } 
       </article>
-      <div className="poke__pagination">
+      {/* <div className="poke__pagination">
        <Pagination 
             pokemonsPerPage={pokemonsPerPage} 
             totalPokemons = {totalPokemons} 
             paginate = {paginate}
             />
-       </div>
+       </div> */}
     </div>
   )
 }

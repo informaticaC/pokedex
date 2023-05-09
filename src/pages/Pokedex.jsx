@@ -17,11 +17,11 @@ const Pokedex = () => { //aquí llega luego de que intoducimos un usuario en For
         <header className='pokedex__header'>
           <div className="pokedex__text-container"></div>
         </header>
-        <article className='pokedex__form-and-pokecontainer'>
+        <section className='pokedex__form-and-pokecontainer'>
             <p><span className='pokedex__welcome'><span>Welcome {trainerName},</span> here you can find your favorite Pokemon</span></p>
             <FormPoke setFormUrl = {setFormUrl} urlBase = {urlBase} />
             <PokeContainer formUrl = {formUrl}  />
-        </article>
+        </section>
     </article>
   )
 }
