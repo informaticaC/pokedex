@@ -22,7 +22,7 @@ const PokeContainer = ({formUrl}) => {  //llamado de Pokedex.jsx-- muestra todos
   //console.log(pokemons)
   
   const [currentPage, setCurrentPage] = useState(1)
-  const [pokemonsPerPage, setPokemonsPerPage] = useState(12)
+  const [pokemonsPerPage, setPokemonsPerPage] = useState(8)
   // Get current pokemons
   const indexOfLastPokemon = currentPage * pokemonsPerPage
   const indexOfFirstPokemon = indexOfLastPokemon -  pokemonsPerPage
@@ -75,7 +75,7 @@ const PokeContainer = ({formUrl}) => {  //llamado de Pokedex.jsx-- muestra todos
             totalPokemons = {totalPokemons} 
             paginate = {paginate}
             />
-       </div> 
+      </div> 
        
       <article className="poke-container">
 

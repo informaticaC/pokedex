@@ -20,6 +20,7 @@ const Pagination = ({pokemonsPerPage, totalPokemons, paginate}) => {
   const handleNext = () => {
     if (currentPages < pageNumbers.length/pagesPerPage){
       setCurrentPages(currentPages + 1)
+      // paginate(currentPages[0])
     }
   }
 
