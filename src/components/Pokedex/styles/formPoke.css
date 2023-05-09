@@ -1,18 +1,24 @@
 .formPokeContainer{
-    background-color: red;
+    /* background-color: red; */
+    width: 100%;
+    height: 80px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
 }
 
 .formPokeContainer__form{
 
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
 }
 
 .formPokeContainer__form input{
     border-radius: .5em 0 0 .5em;
     width: 12em;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 
 }
 
@@ -21,10 +27,13 @@
     background-color: red;
     color: wheat;
     width: 6em;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 }
 
 .formPokeContainer__select{
     border-radius: .5em;
-    width: 12em;
+    width: 16em;
+    height: 40px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 }
 

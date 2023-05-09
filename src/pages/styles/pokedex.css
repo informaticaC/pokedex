@@ -100,11 +100,12 @@
     color: #FE1936;
 }
 .pokedex__form-and-pokecontainer{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
