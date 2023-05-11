@@ -68,6 +68,8 @@ const PokeContainer = ({formUrl}) => {  //llamado de Pokedex.jsx-- muestra todos
   }
   
   return (
+    <div className="pokeContainer__container">
+
     <div className='poke-container_with-pagination'>
       <div className="poke__pagination">
         <Pagination 
@@ -108,6 +110,7 @@ const PokeContainer = ({formUrl}) => {  //llamado de Pokedex.jsx-- muestra todos
             paginate = {paginate}
             />
        </div> */}
+    </div>
     </div>
   )
 }

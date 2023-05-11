@@ -8,7 +8,7 @@ const Progress_bar = ({progress}) => {
 		
 		height: '23px',
 		width: '100%',
-		backgroundColor: 'white',
+		backgroundColor: '#fcefef',
 		borderRadius: 40,
 		marginTop: 10,
 		marginBottom: 10,
@@ -19,7 +19,7 @@ const Progress_bar = ({progress}) => {
 	
 	const Childdiv = {
 		height: '100%',
-		width: `${progress}%`,
+		// width: `${progress}%`,
 		maxWidth: '100%',
 		background: 'linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%)',
 	    borderRadius: 5,
@@ -29,18 +29,18 @@ const Progress_bar = ({progress}) => {
 	const progresstext = {
 		padding: 10,
 		color: 'black',
-		fontWeight: 900
+		fontWeight: 500
 	}
 
 			
 	return (
 		<div  style={Parentdiv}>
 			<motion.div className='progress_bar'
-				animate={{width: (`${progress}%`)}}
+				animate={{width: (`${progress * 0.66}%`)}}
 			 	initial={{width: '0%'}}
 				style={Childdiv}>
 
-				<span style={progresstext}>{`${progress}/150`}</span>
+				<span style={progresstext}>{`${progress}/150` }</span>
 				
 			</motion.div>
 		</div>

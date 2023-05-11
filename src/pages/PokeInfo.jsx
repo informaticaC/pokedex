@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
-import Prueba from '../components/Pokedex/Prueba'
 import Progress_bar from '../components/Progress_bar'
 import './styles/pokeInfo.css'
 
@@ -43,34 +42,35 @@ console.log(pokemon)
               </div>
 
               <div className="pokeInfo__peso-altura">
-                <p className="pokeInfo__peso"><span className='peso_etiqueta'>Peso</span> <span className='peso_value'>{pokemon?.weight}</span></p>
-                <p className="pokeInfo__altura"><span className='altura_etiqueta'>Altura</span> <span className='altura_value'>{pokemon?.height}</span></p>
+                <p className="pokeInfo__peso"><span className='peso_etiqueta'>Weight</span> <span className='peso_value'>{pokemon?.weight}</span></p>
+                <p className="pokeInfo__altura"><span className='altura_etiqueta'>Height</span> <span className='altura_value'>{pokemon?.height}</span></p>
               </div>
 
               <div className="types__abilities-container">
                 <div className={`types__abilities-title `}>
-                  <p>Tipo</p>
-                  <p>Habilities</p>
+                  <p>Types</p>
+                  <p>Abilities</p>
                 </div>
-                <div className="types__values">
-                  <ul>
-                  {
-                    pokemon?.types.map(type => (
-                      <li className={`background-color-${pokemon?.types[0].type.name}`} key={type.type.url}>{type.type.name}</li>
-                    ))
-                  }
-                  </ul>
-                </div>
-                <div className="abilities__values">
-                  <ul>
-                  {
-                    pokemon?.abilities.map(ability => (
-                      <li key={ability.ability.url}>{ability.ability.name}</li>
-                    ))
-                  }
-                  </ul>
-                </div>
-                </div>
+                  <div className="types__abilities-values-container">
+                    
+                      <ul className="types__abilities__values">
+                      {
+                        pokemon?.types.map(type => (
+                          <li className={` types__abilities__values-item `} key={type.type.url}>{type.type.name}</li>
+                        ))//background-color-${pokemon?.types[0].type.name}
+                      }
+                      </ul>
+                                        
+                      <ul className="types__abilities__values">
+                      {
+                        pokemon?.abilities.map(ability => (
+                          <li className='types__abilities__values-item' key={ability.ability.url}>{ability.ability.name}</li>
+                        ))
+                      }
+                      </ul>
+                    
+                    </div>
+                  </div>
               </div>   {/* Fin de types__abilities */}
 
               <article className='pokeInfo__stats'>
@@ -111,7 +111,7 @@ console.log(pokemon)
 
           </div>
 
-              <Prueba />
+              
             </>
         }
     </div>
