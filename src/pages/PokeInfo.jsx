@@ -31,7 +31,7 @@ console.log(pokemon)
             
           <div className='pokeInfo' >
             <section className='pokeInfo__card'> {/* Start card section .pokeInfo__Card*/}
-              <header className={`pokeInfoCard__header color-${pokemon?.types[0].type.name}`}>
+              <header className={`pokeInfoCard__header background-color-${pokemon?.types[0].type.name}`}>
                 <img className='pokemon__sprite' src={pokemon?.sprites.other['official-artwork'].front_default} alt="img pokemon" />
               </header>
               <div className="info">
@@ -56,7 +56,7 @@ console.log(pokemon)
                   <ul>
                   {
                     pokemon?.types.map(type => (
-                      <li className={`color-${pokemon?.types[0].type.name}`} key={type.type.url}>{type.type.name}</li>
+                      <li className={`background-color-${pokemon?.types[0].type.name}`} key={type.type.url}>{type.type.name}</li>
                     ))
                   }
                   </ul>

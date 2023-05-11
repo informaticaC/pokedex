@@ -64,20 +64,20 @@
     transform: translateX(-50%);
 }
 
-.color-grass {
+.background-color-grass {
     background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
     
 }
 
-.color-fire {
+.background-color-fire {
     background-color: #ad4e2b;
 }
 
-.color-water{
+.background-color-water{
     background-color: #1f3e64;
 }
 
-.color-bug{
+.background-color-bug{
     background-color: rgba(74, 182, 72, 1);
     
 }
