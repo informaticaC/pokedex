@@ -55,7 +55,7 @@
     position: relative;
 }
 
-.pokemon__sprite {
+.pokeInfoCard__header-sprite {
     width: 25%;    
     aspect-ratio: 1;
     position: absolute;

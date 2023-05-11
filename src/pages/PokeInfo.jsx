@@ -32,7 +32,7 @@ console.log(pokemon)
           <div className='pokeInfo' >
             <section className='pokeInfo__card'> {/* Start card section .pokeInfo__Card*/}
               <header className={`pokeInfoCard__header background-color-${pokemon?.types[0].type.name}`}>
-                <img className='pokemon__sprite' src={pokemon?.sprites.other['official-artwork'].front_default} alt="img pokemon" />
+                <img className='pokeInfoCard__header-sprite' src={pokemon?.sprites.other['official-artwork'].front_default} alt="img pokemon" />
               </header>
               <div className="info">
               <h3 className='pokeInfo__card-id'>#{pokemon?.id}</h3>
