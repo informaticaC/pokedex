@@ -8,7 +8,7 @@ import Pagination from '../Pagination'
 const PokeContainer = ({formUrl}) => {  //llamado de Pokedex.jsx-- muestra todos los pokemones (las PokeCard.jsx)
 
   const [loading, setLoading] = useState(false)
-  //const url = 'https://pokeapi.co/api/v2/pokemon?limit=500&offset=0'
+  //const url = 'https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0'
   
   const [pokemons, getAllPokemons] = useFetch(formUrl)
   
@@ -22,7 +22,7 @@ const PokeContainer = ({formUrl}) => {  //llamado de Pokedex.jsx-- muestra todos
   //console.log(pokemons)
   
   const [currentPage, setCurrentPage] = useState(1)
-  const [pokemonsPerPage, setPokemonsPerPage] = useState(8)
+  const [pokemonsPerPage, setPokemonsPerPage] = useState(6)
   // Get current pokemons
   const indexOfLastPokemon = currentPage * pokemonsPerPage
   const indexOfFirstPokemon = indexOfLastPokemon -  pokemonsPerPage
