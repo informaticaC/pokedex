@@ -48,7 +48,7 @@ const PokeContainer = ({formUrl}) => {  //llamado de Pokedex.jsx-- muestra todos
   }else{
         
     if (pokemons?.pokemon) {
-      console.log(pokemons?.pokemon.length)
+      // console.log(pokemons?.pokemon.length)
       totalPokemons = pokemons?.pokemon.length
       currentPokemons = pokemons?.pokemon.slice(indexOfFirstPokemon, indexOfLastPokemon)
   

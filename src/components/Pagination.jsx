@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './styles/pagination.css';
+import { visualElementStore } from 'framer-motion';
 
 const Pagination = ({pokemonsPerPage, totalPokemons, paginate}) => {
   const pageNumbers = []
@@ -11,41 +12,64 @@ const Pagination = ({pokemonsPerPage, totalPokemons, paginate}) => {
   //console.log(pageNumbers)
  
   const [currentPages, setCurrentPages] = useState(1)
-  const [pagesPerPage, setPagesPerPage] = useState(6)
+  const [pagesPerPage, setPagesPerPage] = useState(5)
   const indexOfLastPages = currentPages * pagesPerPage
   const indexOfFirstPages = indexOfLastPages - pagesPerPage
   subPageNumbers = pageNumbers.slice(indexOfFirstPages, indexOfLastPages)
   //console.log(subPageNumbers)
-
-  const handleNext = () => {
-    if (currentPages < pageNumbers.length/pagesPerPage){
+  
+  const handleNext = (e) => {
+    console.log('Next')
+    if (currentPages <= pageNumbers.length/pagesPerPage){
       setCurrentPages(currentPages + 1)
-      // paginate(currentPages[0])
+      console.log(currentPages)
+      paginate((subPageNumbers.at(-1) + 1),e)
+
+      // if(((currentPages+1)*pagesPerPage)>subPageNumbers.at(-1)){
+        
+        
+      //   paginate((subPageNumbers.at(-1)+1),e)
+        
+      // }else {
+      //   paginate(((currentPages+1)*pagesPerPage)+2 ,e)
+      // }
+     
     }
   }
 
-  const handlePrevious = () => {
+  const handlePrevious = (e) => {
+    console.log('Previous')
     if (currentPages > 1){
       setCurrentPages(currentPages - 1)
+     console.log('currentPages: ',currentPages)
+     if (currentPages === 2){
+      paginate(currentPages-1,e)
+     } else {
+       
+       paginate(currentPages-1,e)
+    }
+          
     }
   }
-  
+ 
 return (
     <nav className='pagination__container'>
-      <button onClick={handlePrevious} ><i className='bx bx-chevrons-left' ></i></button>
+      <button onClick={(e)=> handlePrevious(e)} ><i className='bx bx-chevrons-left' ></i></button>
       <ul className="pagination">
         {
           subPageNumbers.map(number =>(
+
             <li key={number} className='page-item'>
               <a onClick={(e) => paginate(number,e)} href='!#' className='page-link'>
                 {number}
+               
               </a>
             </li>
           ))
          
         }
       </ul>
-      <button onClick={handleNext}><i className='bx bx-chevrons-right'></i></button>
+      <button onClick={(e)=> handleNext(e)}><i className='bx bx-chevrons-right'></i></button>
     </nav>
   );
 };
